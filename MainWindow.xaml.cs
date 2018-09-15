@@ -1,0 +1,126 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using System.Text.RegularExpressions; 
+
+namespace Calseare
+{
+    /// <summary>
+    /// Interaction logic of MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+        private void Window_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            System.Environment.Exit(0); 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Regex reg = new Regex(@"^([0-9]+(\.(?=[0-9]))?[0-9]*)$");
+                Match ma1 = reg.Match(TextAngle.Text);
+                Match ma2 = reg.Match(TextRadius.Text);
+                if (ma1.Success && ma2.Success)
+                {
+                    double n = Convert.ToDouble(TextAngle.Text);
+                    double r = Convert.ToDouble(TextRadius.Text);
+                    double s = Math.Round(n * Math.PI * Math.Pow(r, 2) / 360, 10);
+                    LabelResult.Content = Properties.Resources.area_of_sector_is + s.ToString();
+                }
+                else
+                {
+                    LabelResult.Content = Properties.Resources.Is_it_digital;
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message.ToString(), "Error", MessageBoxButton.OK, MessageBoxImage.Error);   
+            }
+        }
+
+        private void WindowsLoaded(object sender, RoutedEventArgs e)
+        {
+            LabelResult.Content = Properties.Resources.Input_value;
+            Title.Content = Properties.Resources.Title_Text;
+            LabelRadius.Content = Properties.Resources.LabelRadius_Text;
+            LabelAngle.Content = Properties.Resources.LabelAngle_Text;
+            MainButton.Content = Properties.Resources.MainButton_Text;
+            CloseButton.ToolTip = Properties.Resources.CloseButton_Tip;
+            TextRadius.Focus();
+        }
+
+        private void TextRadius_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if ((TextRadius.Text == "")||(TextAngle.Text==""))
+            {
+                LabelResult.Content = Properties.Resources.Input_value;
+            }
+            else
+            {
+                LabelResult.Content = Properties.Resources.Start_calculation;
+            }
+        }
+
+        private void TextAngle_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if ((TextRadius.Text == "") || (TextAngle.Text == ""))
+            {
+                LabelResult.Content = Properties.Resources.Input_value;
+            }
+            else
+            {
+                LabelResult.Content = Properties.Resources.Input_value;
+            }
+        }
+
+        private void TextRadius_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                TextAngle.Focus();
+            }
+        }
+
+        private void TextAngle_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                Button_Click(sender, e);
+                TextRadius.Focus();
+            }
+        }
+
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (Keyboard.IsKeyDown(Key.LeftCtrl) && Keyboard.IsKeyDown(Key.LeftAlt) && Keyboard.IsKeyDown(Key.S))
+            {
+                new SignIn().Show();
+            }
+            if (Keyboard.IsKeyDown(Key.LeftCtrl) && Keyboard.IsKeyDown(Key.LeftAlt) && Keyboard.IsKeyDown(Key.A))
+            {
+                new AboutBox().Show();
+            }
+        }
+    }
+}

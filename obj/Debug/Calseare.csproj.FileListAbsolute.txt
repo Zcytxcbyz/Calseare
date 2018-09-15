@@ -1,0 +1,17 @@
+d:\users\haan\文档\visual studio 2013\Projects\Calseare\Calseare\obj\Debug\Calseare.csprojResolveAssemblyReference.cache
+d:\users\haan\文档\visual studio 2013\Projects\Calseare\Calseare\obj\Debug\MainWindow.baml
+d:\users\haan\文档\visual studio 2013\Projects\Calseare\Calseare\obj\Debug\MainWindow.g.cs
+d:\users\haan\文档\visual studio 2013\Projects\Calseare\Calseare\obj\Debug\App.g.cs
+d:\users\haan\文档\visual studio 2013\Projects\Calseare\Calseare\obj\Debug\Calseare.Properties.Resources.resources
+d:\users\haan\文档\visual studio 2013\Projects\Calseare\Calseare\obj\Debug\Calseare.csproj.GenerateResource.Cache
+d:\Users\haan\文档\visual studio 2013\Projects\Calseare\Calseare\obj\Debug\Themes\Generic.baml
+d:\Users\haan\文档\visual studio 2013\Projects\Calseare\Calseare\bin\Debug\计算扇形面积.exe
+d:\Users\haan\文档\visual studio 2013\Projects\Calseare\Calseare\bin\Debug\计算扇形面积.pdb
+d:\Users\haan\文档\visual studio 2013\Projects\Calseare\Calseare\obj\Debug\计算扇形面积_MarkupCompile.cache
+d:\Users\haan\文档\visual studio 2013\Projects\Calseare\Calseare\obj\Debug\计算扇形面积_MarkupCompile.lref
+d:\Users\haan\文档\visual studio 2013\Projects\Calseare\Calseare\obj\Debug\计算扇形面积.g.resources
+d:\Users\haan\文档\visual studio 2013\Projects\Calseare\Calseare\obj\Debug\计算扇形面积.exe
+d:\Users\haan\文档\visual studio 2013\Projects\Calseare\Calseare\obj\Debug\计算扇形面积.pdb
+d:\Users\haan\文档\visual studio 2013\Projects\Calseare\Calseare\obj\Debug\Calseare.SignIn.resources
+d:\Users\haan\文档\visual studio 2013\Projects\Calseare\Calseare\obj\Debug\Calseare.AboutBox.resources
+d:\Users\haan\文档\visual studio 2013\Projects\Calseare\Calseare\obj\Debug\Calseare.Code.resources
